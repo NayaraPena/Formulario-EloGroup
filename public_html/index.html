@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formulário EloGroup</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script type="text/Javascript" src="http://localhost/Formulario-EloGroup/public_html/js/jquery.maskedinput.js"></script>
+        <script src="http://localhost/Formulario-EloGroup/public_html/js/formulario.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="container" align="center" id="container">
+        <header><h1>Formulário EloGroup</h1></header>  
+        <label >Os campos marcados com</label> <label style="color:red;"> *</label>  <label> são de preenchimento obrigatório</label><br><br>
+        <div id="caixa"></div>
+        <nav> </nav>
+
+
+        <form id="form" method="POST"  action="http://localhost/Formulario-EloGroup/public_html/recebeFormulario.php">
+            <div class="form-group">
+                <label >Nome:</label><label style="color:red;"> *</label> 
+                <input type="text" class="form-control" name="nome" placeholder="Digite o seu nome" required>
+            </div>
+
+            <div class="form-group">
+                <label>Telefone:</label><label style="color:red;"> *</label> 
+                <input type="text" class="form-control" name="telefone" placeholder="Digite o seu telefone (99 – 99999999)" required>
+            </div>
+
+            <div>
+                <label>Como nos conheceu:</label> 
+
+                <select id="comoConheceu" name="comoConheceu" class="form-control">
+                    <option value="0">Selecione...</option>
+                    <option value="1">Internet</option>
+                    <option value="2">Tv</option>
+                    <option value="3">Outros</option>
+                </select>
+
+
+            </div>
+
+
+
+
+            <label>Possui rede social:</label>
+
+            <div class="row">
+                <div class="col-sm-6" align="right">
+                    <label class="radio-inline">
+                        <input type="radio" value="sim" name="radioRedeSocial" onclick="exibeRede()">Sim
+
+                    </label>
+                </div>
+                <div class="col-sm-6" align="left">
+                    <label class="radio-inline">
+                        <input type=radio  value="nao" name="radioRedeSocial" onclick=" limpaRedeSocial()" checked>Não
+                    </label>
+                </div>  
+            </div>
+
+
+
+            <div id="redeSocial"></div>   
+
+
+
+
+            <br><br>
+
+            <div class="row">
+ <button type="submit" class="btn btn-success" > Enviar Dados</button>
+            </div>
+
+
+
+        </form>
+        <br><br>
+        <button type="button" class="btn btn-danger" onclick="document.location.reload(true);">Limpar Formulário</button>
+
+
+
+        <footer> </footer>
+    </div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
